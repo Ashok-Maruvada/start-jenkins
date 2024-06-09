@@ -25,7 +25,6 @@ pipeline{
         stage('deploy'){
             steps{
                 sh 'echo this is deploy stage'
-                sh 'this is ashok'
             }
         }
     }
