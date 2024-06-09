@@ -6,20 +6,24 @@ pipeline{
         timeout(time: 30, unit: 'MINUTES')
         disableConcurrentBuilds()
     }
+    environment{
+        DEPLOY_TO =  'production'
+        GREETING = 'Good Morning'
+    }
     stages{
         stage('build'){
             steps{
-                echo 'this is build stage'
+                sh 'this is build stage'
             }
         }
         stage('test'){
             steps{
-                echo 'this si test stage'
+                sh 'this si test stage'
             }
         }
         stage('deploy'){
             steps{
-                echo 'this is deploy stage'
+                sh 'this is deploy stage'
             }
         }
     }
